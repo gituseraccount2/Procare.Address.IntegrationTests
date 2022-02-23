@@ -43,7 +43,7 @@ namespace Procare.Address.IntegrationTests
             }
         }
         [Fact]
-        public async Task GetAddresses_Without_ValidAddress_ShouldResultIn_ThrowingError()
+        public async Task GetAddresses_With_InValidAddress_ShouldResultIn_NoMatches()
         {
             var result = await this.service.GetAddressesAsync(new AddressFilter { Line1 = "1 W Main St", City = "Medford", StateCode = "FA" }).ConfigureAwait(false);
             
